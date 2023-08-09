@@ -1,3 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --veryDarkMagenta: hsl(300, 43%, 22%);
+  --softPink: hsl(333, 80%, 67%);
+  --darkGrayishMagenta: hsl(303, 10%, 53%);
+  --lightGrayishMagenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🛢️ Container */
+.container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* 🤯 Header */
+header {
+  width: 35%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--veryDarkMagenta);
+}
+
+.para {
+  font-size: 1.21rem;
+  padding-bottom: 4rem;
+  line-height: 1.4;
+  color: var(--darkGrayishMagenta);
+}
+
+/* ⭐ Star Rating */
+.rating {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  padding: 0.2rem;
+}
+
+.stars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem 4rem 1rem 2rem;
+  margin: 0.5rem;
+  color: var(--veryDarkMagenta);
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: var(--lightGrayishMagenta);
+}
+
+span {
+  padding-left: 2rem;
+}
+
+/* ✨ Stars Allignment */
+.stars:nth-of-type(1) {
+  align-self: flex-start;
+}
+.stars:nth-of-type(3) {
+  align-self: flex-end;
+}
+
+/*🎴 Card */
+
+.card {
+  width: 26%;
+  padding: 2rem;
+  background-color: var(--veryDarkMagenta);
+  color: var(--white);
+  border-radius: 10px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+}
+
+.profile_pic {
+  border-radius: 50%;
+  width: 50px;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-left: 1rem;
+  margin: 0.4rem;
+}
+
+.comment {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+
+.pink_text {
+  color: var(--softPink);
+}
+
+/* Card Allignment */
+.card:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+.card:nth-of-type(2) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card:nth-of-type(3) {
+  margin-top: 2rem;
+}
+
 /* 👣 Footer */
 .attribution {
   position: absolute;
@@ -11,5 +146,59 @@
 }
 
 /* 📱 Media Query */
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 1105px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  header,
+  .rating,
+  .card {
+    width: 100%;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .container {
+    margin: 1rem;
+  }
+
+  .para {
+    padding: 1rem;
+  }
+
+  span {
+    padding: 1rem 0 0 0;
+  }
+
+  .rating {
+    width: 100%;
+  }
+
+  .stars {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem 0;
+  }
+
+  .stars:nth-of-type(1) {
+    align-self: center;
+  }
+  .stars:nth-of-type(3) {
+    align-self: center;
+  }
+
+  .card {
+    margin: 1rem 0;
+  }
+
+  .attribution {
+    position: relative;
+  }
 }
