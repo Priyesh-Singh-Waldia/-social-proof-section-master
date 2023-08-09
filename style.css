@@ -92,7 +92,7 @@ span {
   border-radius: 10px;
 }
 
-section {
+.section {
   display: flex;
   align-items: center;
 }
